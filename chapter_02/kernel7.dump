@@ -1,0 +1,31 @@
+
+kernel7.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00008000 <__start>:
+	...
+
+00010000 <_start>:
+   10000:	e59f0014 	ldr	r0, [pc, #20]	; 1001c <_start+0x1c>
+   10004:	e3a01001 	mov	r1, #1
+   10008:	e1a01a81 	lsl	r1, r1, #21
+   1000c:	e5801010 	str	r1, [r0, #16]
+   10010:	e3a01001 	mov	r1, #1
+   10014:	e1a01781 	lsl	r1, r1, #15
+   10018:	e5801020 	str	r1, [r0, #32]
+   1001c:	20200000 	eorcs	r0, r0, r0
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00001c41 	andeq	r1, r0, r1, asr #24
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000012 	andeq	r0, r0, r2, lsl r0
+  10:	5a4b3605 	bpl	12cd82c <__end+0x12bc82c>
+  14:	08070600 	stmdaeq	r7, {r9, sl}
+  18:	44010901 	strmi	r0, [r1], #-2305	; 0xfffff6ff
+  1c:	Address 0x000000000000001c is out of bounds.
+
